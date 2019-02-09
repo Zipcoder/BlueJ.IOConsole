@@ -32,6 +32,7 @@ public class IOConsole {
      */
     public void print(String val, Object... args) {
         out.format(val, args);
+        System.out.print(out);
     }
 
     /**
@@ -39,6 +40,8 @@ public class IOConsole {
      * @param args : optional arguments to send for string formatting
      */
     public void println(String val, Object... args) {
+        out.format(val+"\n", args);
+        System.out.println(out);
     }
 
     /**
@@ -47,7 +50,12 @@ public class IOConsole {
      * @return user's input as String
      */
     public String getStringInput(String prompt, Object... args) {
-        return null;
+        println(prompt,args);
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        scanner.close();
+        
+        return input; 
     }
 
     /**
@@ -56,7 +64,12 @@ public class IOConsole {
      * @return user's input as integer
      */
     public Integer getIntegerInput(String prompt, Object... args) {
-        return null;
+        println(prompt,args);
+        Scanner scanner = new Scanner(System.in);
+        Integer input = scanner.nextInt();
+        scanner.close();
+        
+        return input; 
     }
 
     /**
@@ -65,7 +78,12 @@ public class IOConsole {
      * @return user's input as double
      */
     public Double getDoubleInput(String prompt, Object... args) {
-        return null;
+        println(prompt,args);
+        Scanner scanner = new Scanner(System.in);
+        Double input = scanner.nextDouble();
+        scanner.close();
+        
+        return input; 
     }
 
     /**
@@ -74,7 +92,12 @@ public class IOConsole {
      * @return user's input as float
      */
     public Float getFloatInput(String prompt, Object... args) {
-        return null;
+        println(prompt,args);
+        Scanner scanner = new Scanner(System.in);
+        Float input = scanner.nextFloat();
+        scanner.close();
+        
+        return input; 
     }
 
     /**
@@ -83,6 +106,11 @@ public class IOConsole {
      * @return user's input as long
      */
     public Long getLongInput(String prompt, Object... args) {
-        return null;
+        println(prompt,args);
+        Scanner scanner = new Scanner(System.in);
+        Long input = scanner.nextLong();
+        scanner.close();
+        
+        return input; 
     }
 }
