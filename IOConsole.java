@@ -12,11 +12,13 @@ import java.util.Scanner;
 public class IOConsole {
     private final Scanner scanner;
     private final PrintStream out;
+    
+    private int number;
 
     public IOConsole() {
         this(System.in, System.out);
     }
-
+ 
     public IOConsole(InputStream inputStream, OutputStream outputStream) {
         this(new Scanner(inputStream), new PrintStream(outputStream));
     }
@@ -47,6 +49,8 @@ public class IOConsole {
      * @return user's input as String
      */
     public String getStringInput(String prompt, Object... args) {
+        out.println(prompt);
+        String result = scanner.next
         return null;
     }
 
@@ -56,7 +60,9 @@ public class IOConsole {
      * @return user's input as integer
      */
     public Integer getIntegerInput(String prompt, Object... args) {
-        return null;
+        out.println(prompt);
+        Integer result = scanner.nextInt();
+        return result;
     }
 
     /**
@@ -65,7 +71,9 @@ public class IOConsole {
      * @return user's input as double
      */
     public Double getDoubleInput(String prompt, Object... args) {
-        return null;
+        out.println(prompt);
+        Double result = scanner.nextDouble();
+        return result;
     }
 
     /**
@@ -74,7 +82,9 @@ public class IOConsole {
      * @return user's input as float
      */
     public Float getFloatInput(String prompt, Object... args) {
-        return null;
+        out.println(prompt);
+        Float result = scanner.nextFloat();
+        return result;
     }
 
     /**
@@ -83,6 +93,8 @@ public class IOConsole {
      * @return user's input as long
      */
     public Long getLongInput(String prompt, Object... args) {
-        return null;
+        out.println(prompt);
+        Long result = scanner.nextLong();
+        return result;
     }
 }
