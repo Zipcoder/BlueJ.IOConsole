@@ -1,6 +1,4 @@
- 
-
-/**
+ /**
  * @author leon on 03/02/2019.
  */
 
@@ -27,7 +25,7 @@ public class IOConsole {
         this.scanner = scanner;
         this.out = printStream;
     }
-
+    
     /**
      * @param val  : text to display on console
      * @param args : optional arguments to send for string formatting
@@ -35,13 +33,20 @@ public class IOConsole {
     public void print(String val, Object... args) {
         out.format(val, args);
     }
-
+    // val- msg you want to display to the user
+    // args- the format (how it is diplayed. can be ignore for calculator project
     /**
      * @param val  : text to display on console
      * @param args : optional arguments to send for string formatting
      */
     public void println(String val, Object... args) {
+        out.format(val, args);
+        out.format("\n");
+        
+        //System.out.print(val);
+        //System.out.print("\n");
     }
+   
 
     /**
      * @param prompt : text to display to user
@@ -50,10 +55,10 @@ public class IOConsole {
      */
     public String getStringInput(String prompt, Object... args) {
         out.println(prompt);
-        String result = scanner.next
-        return null;
+        return scanner.next();
     }
-
+    //prompt -" enter a number"
+    //return is what the the user want to put in
     /**
      * @param prompt : text to display to user
      * @param args   : optional arguments to send for string formatting
