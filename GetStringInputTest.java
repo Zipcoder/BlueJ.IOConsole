@@ -52,10 +52,10 @@ public class GetStringInputTest {
         this.console = getConsoleWithBufferedInput(input);
 
         // When
-        String actual = console.getStringInput("",input);
+        String actual = console.getStringInput("");
 
         // Then
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(actual, expected);
     }
 
     private IOConsole getConsoleWithBufferedInput(String inputString) {
