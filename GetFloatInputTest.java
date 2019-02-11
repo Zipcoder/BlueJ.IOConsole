@@ -17,6 +17,8 @@ public class GetFloatInputTest {
 
     @Test
     public void test1() {
+        IOConsole console = new IOConsole();
+        
         test("0", 0F);
     }
 
