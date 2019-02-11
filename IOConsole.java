@@ -42,9 +42,6 @@ public class IOConsole {
     public void println(String val, Object... args) {
         out.format(val, args);
         out.format("\n");
-        
-        //System.out.print(val);
-        //System.out.print("\n");
     }
    
 
@@ -57,8 +54,7 @@ public class IOConsole {
         out.println(prompt);
         return scanner.next();
     }
-    //prompt -" enter a number"
-    //return is what the the user want to put in
+
     /**
      * @param prompt : text to display to user
      * @param args   : optional arguments to send for string formatting
